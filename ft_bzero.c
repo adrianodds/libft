@@ -1,28 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adduarte <adduarte@student.42porto.com>    #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025-04-10 15:10:28 by adduarte          #+#    #+#             */
-/*   Updated: 2025-04-10 15:10:28 by adduarte         ###   ########.fr       */
+/*   Created: 2025-04-10 18:02:24 by adduarte          #+#    #+#             */
+/*   Updated: 2025-04-10 18:02:24 by adduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*#include <unistd.h>
 #include "libft.h"
+#include <ctype.h>
+#include <stdio.h>
+#include <string.h>*/
 
-int	ft_isalpha(int caracter)
+void	*ft_bzero(void *ptr, unsigned int num)
 {
-	if ((caracter >= 65 && caracter <= 90) || (caracter >= 97
-			&& caracter <= 122))
+	unsigned int	i;
+	unsigned char	*p;
+
+	p = ptr;
+	i = 0;
+	while (i != num)
 	{
-		return (1);
+		p[i] = 0;
+		i++;
 	}
-	return (0);
+	return (ptr);
 }
-
-/*int main(void)
+/*
+int	main(void)
 {
-	printf("%d\n", ft_isalpha("aa"));
+	char str[50] = "Adriano";
+	printf("%s\n", ft_bzero(str, sizeof(str)));
+
+	int i;
+	for (i = 0; i < sizeof(str); i++)
+	{
+		printf("%d", str[i]);
+	}
+	printf("%\n");
 }*/

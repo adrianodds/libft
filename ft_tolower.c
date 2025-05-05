@@ -1,28 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adduarte <adduarte@student.42porto.com>    #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025-04-10 15:10:28 by adduarte          #+#    #+#             */
-/*   Updated: 2025-04-10 15:10:28 by adduarte         ###   ########.fr       */
+/*   Created: 2025-04-15 15:52:46 by adduarte          #+#    #+#             */
+/*   Updated: 2025-04-15 15:52:46 by adduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int caracter)
+int	ft_tolower(int c)
 {
-	if ((caracter >= 65 && caracter <= 90) || (caracter >= 97
-			&& caracter <= 122))
-	{
-		return (1);
-	}
-	return (0);
+	if (c >= 65 && c <= 90)
+		return (c + 32);
+	return (c);
 }
 
-/*int main(void)
+/*int	main(void)
 {
-	printf("%d\n", ft_isalpha("aa"));
+	printf("%c\n", ft_tolouwer('a'));
 }*/

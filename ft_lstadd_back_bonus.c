@@ -1,28 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adduarte <adduarte@student.42porto.com>    #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025-04-10 15:10:28 by adduarte          #+#    #+#             */
-/*   Updated: 2025-04-10 15:10:28 by adduarte         ###   ########.fr       */
+/*   Created: 2025-04-30 16:24:37 by adduarte          #+#    #+#             */
+/*   Updated: 2025-04-30 16:24:37 by adduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int caracter)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	if ((caracter >= 65 && caracter <= 90) || (caracter >= 97
-			&& caracter <= 122))
-	{
-		return (1);
-	}
-	return (0);
-}
+	t_list	*current;
 
-/*int main(void)
-{
-	printf("%d\n", ft_isalpha("aa"));
-}*/
+	current = *lst;
+	if (!new)
+		return ;
+	if (!*lst)
+	{
+		*lst = new;
+		return ;
+	}
+	while (current->next)
+		current = current->next;
+	current->next = new;
+}
+/*if lst is null it becomes new*/

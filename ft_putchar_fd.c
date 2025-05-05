@@ -1,28 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adduarte <adduarte@student.42porto.com>    #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025-04-10 15:10:28 by adduarte          #+#    #+#             */
-/*   Updated: 2025-04-10 15:10:28 by adduarte         ###   ########.fr       */
+/*   Created: 2025-04-19 17:27:31 by adduarte          #+#    #+#             */
+/*   Updated: 2025-04-19 17:27:31 by adduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int caracter)
+void	ft_putchar_fd(char c, int fd)
 {
-	if ((caracter >= 65 && caracter <= 90) || (caracter >= 97
-			&& caracter <= 122))
-	{
-		return (1);
-	}
-	return (0);
+	write(fd, &c, 1);
 }
 
-/*int main(void)
+/* int	main(void)
 {
-	printf("%d\n", ft_isalpha("aa"));
-}*/
+	ft_putchar_fd('A', 1);
+	ft_putchar_fd('\n', 1);
+} */

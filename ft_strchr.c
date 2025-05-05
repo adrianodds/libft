@@ -1,28 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adduarte <adduarte@student.42porto.com>    #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025-04-10 15:10:28 by adduarte          #+#    #+#             */
-/*   Updated: 2025-04-10 15:10:28 by adduarte         ###   ########.fr       */
+/*   Created: 2025-04-15 16:01:19 by adduarte          #+#    #+#             */
+/*   Updated: 2025-04-15 16:01:19 by adduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int caracter)
+char	*ft_strchr(const char *str, int c)
 {
-	if ((caracter >= 65 && caracter <= 90) || (caracter >= 97
-			&& caracter <= 122))
+	int	i;
+
+	i = 0;
+	while (str[i] != 0)
 	{
-		return (1);
+		if (str[i] == (char)c)
+			return ((char *)&str[i]);
+		i++;
 	}
-	return (0);
+	if (!(char)c)
+		return ((char *)&str[i]);
+	return (NULL);
 }
 
-/*int main(void)
+/* int	main(void)
 {
-	printf("%d\n", ft_isalpha("aa"));
-}*/
+	char *str = "Adriano Duarte da Silva";
+	printf("%s\n", ft_strchr(str, 'S'));
+} */

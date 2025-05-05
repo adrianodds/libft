@@ -1,28 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adduarte <adduarte@student.42porto.com>    #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025-04-10 15:10:28 by adduarte          #+#    #+#             */
-/*   Updated: 2025-04-10 15:10:28 by adduarte         ###   ########.fr       */
+/*   Created: 2025-04-10 16:48:41 by adduarte          #+#    #+#             */
+/*   Updated: 2025-04-10 16:48:41 by adduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int caracter)
+void	*ft_memset(void *ptr, int value, unsigned int num)
 {
-	if ((caracter >= 65 && caracter <= 90) || (caracter >= 97
-			&& caracter <= 122))
-	{
-		return (1);
-	}
-	return (0);
-}
+	unsigned int	i;
+	unsigned char	*p;
 
-/*int main(void)
+	p = ptr;
+	i = 0;
+	while (i != num)
+	{
+		p[i] = (unsigned char)value;
+		i++;
+	}
+	return (ptr);
+}
+/*
+int	main(void)
 {
-	printf("%d\n", ft_isalpha("aa"));
+	char str[50] = "Adriano";
+	printf("%s\n", ft_memset(str, 'Y', sizeof(str)));
 }*/

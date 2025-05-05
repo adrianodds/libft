@@ -1,28 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adduarte <adduarte@student.42porto.com>    #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025-04-10 15:10:28 by adduarte          #+#    #+#             */
-/*   Updated: 2025-04-10 15:10:28 by adduarte         ###   ########.fr       */
+/*   Created: 2025-04-19 18:09:38 by adduarte          #+#    #+#             */
+/*   Updated: 2025-04-19 18:09:38 by adduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int caracter)
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	if ((caracter >= 65 && caracter <= 90) || (caracter >= 97
-			&& caracter <= 122))
+	int	i;
+
+	i = 0;
+	while (s[i])
 	{
-		return (1);
+		f(i, &s[i]);
+		i++;
 	}
-	return (0);
 }
 
-/*int main(void)
+/* int	main(void)
 {
-	printf("%d\n", ft_isalpha("aa"));
-}*/
+	char str[] = "adriano";
+	ft_striteri(str, to_uppercase);
+	printf("%s\n", str);
+} */

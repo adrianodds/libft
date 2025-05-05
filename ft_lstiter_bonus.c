@@ -1,28 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adduarte <adduarte@student.42porto.com>    #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025-04-10 15:10:28 by adduarte          #+#    #+#             */
-/*   Updated: 2025-04-10 15:10:28 by adduarte         ###   ########.fr       */
+/*   Created: 2025-04-30 17:45:44 by adduarte          #+#    #+#             */
+/*   Updated: 2025-04-30 17:45:44 by adduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int caracter)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	if ((caracter >= 65 && caracter <= 90) || (caracter >= 97
-			&& caracter <= 122))
+	if (!lst || !f)
+		return ;
+	while (lst->next)
 	{
-		return (1);
+		f(lst->content);
+		lst = lst->next;
 	}
-	return (0);
+	f(lst->content);
 }
-
-/*int main(void)
-{
-	printf("%d\n", ft_isalpha("aa"));
-}*/

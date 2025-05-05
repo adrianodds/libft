@@ -1,28 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adduarte <adduarte@student.42porto.com>    #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025-04-10 15:10:28 by adduarte          #+#    #+#             */
-/*   Updated: 2025-04-10 15:10:28 by adduarte         ###   ########.fr       */
+/*   Created: 2025-04-17 14:23:32 by adduarte          #+#    #+#             */
+/*   Updated: 2025-04-17 14:23:32 by adduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int caracter)
+void	*ft_calloc(unsigned int nmemb, unsigned int size)
 {
-	if ((caracter >= 65 && caracter <= 90) || (caracter >= 97
-			&& caracter <= 122))
-	{
+	int	*arr;
+
+	arr = (int *)malloc(nmemb * size);
+	if (!arr)
+		return (NULL);
+	ft_bzero(arr, nmemb * size);
+	return (arr);
+}
+/*
+int	main(void)
+{
+	int *arr = (int *)ft_calloc(10, sizeof(int));
+	if (arr == NULL) {
+		printf("Falha ao alocar memória.\n");
 		return (1);
 	}
-	return (0);
-}
-
-/*int main(void)
-{
-	printf("%d\n", ft_isalpha("aa"));
+	for (int i = 0; i < 10; i++) {
+		printf("%d ", arr[i]);
+	}
 }*/
