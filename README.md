@@ -51,7 +51,6 @@ libft/
 ### Ou seja, no seu README.md escreva:
 
 ```markdown
-```
 
 libft/
 ├── ft\_*.c
@@ -59,7 +58,6 @@ libft/
 ├── libft.h
 └── Makefile
 
-```
 ```
 
 ---
