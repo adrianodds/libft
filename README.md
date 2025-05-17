@@ -59,20 +59,6 @@ libft/
 └── Makefile
 
 ```
-
----
-
-### Explicação
-
-* As três crases ` ``` ` abrem e fecham o bloco de código.
-* Tudo dentro desse bloco aparece exatamente como você escreveu, com espaços e símbolos preservados.
-* Assim o GitHub exibe a estrutura da pasta formatada.
-
----
-
-Se quiser, posso montar um arquivo README.md completo com isso já formatado pra você! Quer?
-
-
 ## 🔧 Compilação
 ```markdown
 - Compile a biblioteca com: `make`
