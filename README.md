@@ -44,7 +44,7 @@ libft/
 - Para limpar tudo (incluindo libft.a): `make fclean`
 
 - Para recompilar do zero: `make re`
-
+```
 ## Autor
 
 Adriano Silva
