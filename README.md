@@ -28,10 +28,6 @@ Sim, até listas encadeadas. Porque C não tem `std::vector`, mas tem você.
 
 ## 🏗️ Estrutura do Projeto
 
-Verdade! Para mostrar o código Markdown **sem que ele seja renderizado** aqui, preciso “escapar” as crases ou usar outra formatação.
-
-Vou mostrar direitinho como escrever no seu README.md para que apareça a árvore de pastas com a formatação correta.
-
 ```markdown
 
 libft/
