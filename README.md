@@ -28,11 +28,51 @@ Sim, até listas encadeadas. Porque C não tem `std::vector`, mas tem você.
 
 ## 🏗️ Estrutura do Projeto
 
+Verdade! Para mostrar o código Markdown **sem que ele seja renderizado** aqui, preciso “escapar” as crases ou usar outra formatação.
+
+Vou mostrar direitinho como escrever no seu README.md para que apareça a árvore de pastas com a formatação correta.
+
+---
+
+### Para o seu README.md, copie exatamente este trecho:
+
+\`\`\`
 libft/
-├── ft_.c
-├── ft_.h
+├── ft\_*.c
+├── ft\_*.h
 ├── libft.h
 └── Makefile
+\`\`\`
+
+(*sem as barras invertidas* — aqui elas só estão para mostrar o código! No seu arquivo, não coloque as barras invertidas\*)
+
+---
+
+### Ou seja, no seu README.md escreva:
+
+```markdown
+```
+
+libft/
+├── ft\_*.c
+├── ft\_*.h
+├── libft.h
+└── Makefile
+
+```
+```
+
+---
+
+### Explicação
+
+* As três crases ` ``` ` abrem e fecham o bloco de código.
+* Tudo dentro desse bloco aparece exatamente como você escreveu, com espaços e símbolos preservados.
+* Assim o GitHub exibe a estrutura da pasta formatada.
+
+---
+
+Se quiser, posso montar um arquivo README.md completo com isso já formatado pra você! Quer?
 
 
 ## 🔧 Compilação
