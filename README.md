@@ -45,10 +45,10 @@ libft/
 
 - Para recompilar do zero: `make re`
 
-##Autor
+## Autor
 
 Adriano Silva
 
-##Licença
+## Licença
 
 Este projeto segue as normas da 42: ou seja, pode usar, pode copiar, só não plagie no intra. 😉
