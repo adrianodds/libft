@@ -10,15 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include <unistd.h>
 #include "libft.h"
-#include <ctype.h>
-#include <stdio.h>
-#include <string.h>*/
 
-void	*ft_bzero(void *ptr, unsigned int num)
+void	*ft_bzero(void *ptr, size_t num)
 {
-	unsigned int	i;
+	size_t			i;
 	unsigned char	*p;
 
 	p = ptr;

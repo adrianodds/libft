@@ -12,14 +12,14 @@
 
 #include "libft.h"
 
-int	count_int(int n)
+static int	count_int(long n)
 {
 	int	i;
 
 	i = 0;
 	if (n <= 0)
 	{
-		n = n * -1;
+		n = -n;
 		i = 1;
 	}
 	while (n)
@@ -33,28 +33,26 @@ int	count_int(int n)
 char	*ft_itoa(int n)
 {
 	char	*index;
-	int		l;
+	int		lenght;
+	long	number;
 
-	l = count_int(n);
-	index = (char *)malloc(l + 1);
+	number = n;
+	lenght = count_int(number);
+	index = (char *)malloc(lenght + 1);
 	if (!index)
 		return (NULL);
-	if (n == -2147483648)
+	index[lenght--] = 0;
+	if (number < 0)
 	{
-		ft_strlcpy(index, "-2147483648", l + 1);
-		return (index);
-	}
-	index[l--] = 0;
-	if (n < 0)
-	{
-		n = n * -1;
+		number = -number;
 		index[0] = '-';
 	}
-	index[l] = n + '0';
-	while (n)
+	if (number == 0)
+		index[lenght] = number + '0';
+	while (number)
 	{
-		index[l--] = (n % 10) + '0';
-		n = n / 10;
+		index[lenght--] = (number % 10) + '0';
+		number = number / 10;
 	}
 	return (index);
 }
@@ -63,7 +61,8 @@ If you pass a 0, the index[l] = n + '0'; \
 ensure that zero is returned since in the \
 10 conversion condition it does so while \
 is greater than zero.
+#include <stdio.h>
  int	main(void)
 {
 	printf("%s\n", ft_itoa(-15489565));
-} */
+}*/

@@ -24,7 +24,7 @@
 
 #include "libft.h"
 
-void	*ft_memcpy_reverse(void *dest, const void *str, unsigned int num)
+static void	*ft_memcpy_reverse(void *dest, const void *str, unsigned int num)
 {
 	unsigned char		*p;
 	const unsigned char	*s = str;
@@ -40,7 +40,7 @@ void	*ft_memcpy_reverse(void *dest, const void *str, unsigned int num)
 	return (dest);
 }
 
-void	*ft_memmove(void *dest, const void *str, unsigned int num)
+void	*ft_memmove(void *dest, const void *str, size_t num)
 {
 	unsigned char		*p;
 	const unsigned char	*s = str;
@@ -57,7 +57,9 @@ void	*ft_memmove(void *dest, const void *str, unsigned int num)
 		return (ft_memcpy_reverse(dest, str, num));
 	}
 }
-
+/*(p < s) checks whether the start of "dest" occurs before the start of "str",\
+ or if (p >= (s + num) the start of "dest" occurs after the end of "str". \
+ Thus ensuring that there will be no memory overlap at the time of copying.*/
 /*
 int	main(void)
 {

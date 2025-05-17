@@ -12,14 +12,6 @@
 
 #include "libft.h"
 
-char	to_upper(unsigned int i, char c)
-{
-	(void)i;
-	if (c >= 'a' && c <= 'z')
-		return (c - 32);
-	return (c);
-}
-
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	int		i;
@@ -39,7 +31,14 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	str[i] = 0;
 	return (str);
 }
-/*
+
+/* static char	to_upper(unsigned int i, char c)
+{
+	(void)i;
+	if (c >= 'a' && c <= 'z')
+		return (c - 32);
+	return (c);
+}
 int	main(void)
 {
 	printf("%s\n", ft_strmapi("adriano", to_upper));

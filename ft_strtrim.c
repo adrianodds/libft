@@ -12,19 +12,6 @@
 
 #include "libft.h"
 
-char	*cpy_str_trim(int start, int end, char *str, const char *s1)
-{
-	int	i;
-
-	i = 0;
-	while (start++ < end - 1)
-	{
-		str[i++] = s1[start];
-	}
-	str[i] = 0;
-	return (str);
-}
-
 static int	check_trim(char str, const char *tr)
 {
 	int	i;

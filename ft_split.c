@@ -12,24 +12,24 @@
 
 #include "libft.h"
 
-int	count_words(const char *s, char d)
+static int	count_words(const char *s, char d)
 {
 	int	i;
-	int	w;
+	int	in_word;
 	int	words;
 
 	i = 0;
-	w = 0;
+	in_word = 0;
 	words = 0;
 	while (s[i])
 	{
-		if (s[i] != d && !w)
+		if (s[i] != d && !in_word)
 		{
-			w = 1;
-			words = words + 1;
+			in_word = 1;
+			words++;
 		}
-		else if (s[i] == d && w)
-			w = 0;
+		else if (s[i] == d && in_word)
+			in_word = 0;
 		i++;
 	}
 	return (words);
@@ -71,7 +71,9 @@ char	**ft_split(const char *s, char c)
 	result[index[2]] = NULL;
 	return (result);
 }
-/* int	main(void)
+/*index[0] = initial_position; index[1] = final_position, \
+index[2] = index_new_word
+int	main(void)
 {
 	char **split = ft_split(" semper congue, euismod non, mi.", 'i');
 	int	i = 0;

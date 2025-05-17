@@ -14,12 +14,8 @@
 
 int	ft_isalpha(int caracter)
 {
-	if ((caracter >= 65 && caracter <= 90) || (caracter >= 97
-			&& caracter <= 122))
-	{
-		return (1);
-	}
-	return (0);
+	return ((caracter >= 65 && caracter <= 90) || (caracter >= 97
+			&& caracter <= 122));
 }
 
 /*int main(void)
