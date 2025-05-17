@@ -32,24 +32,6 @@ Verdade! Para mostrar o código Markdown **sem que ele seja renderizado** aqui, 
 
 Vou mostrar direitinho como escrever no seu README.md para que apareça a árvore de pastas com a formatação correta.
 
----
-
-### Para o seu README.md, copie exatamente este trecho:
-
-\`\`\`
-libft/
-├── ft\_*.c
-├── ft\_*.h
-├── libft.h
-└── Makefile
-\`\`\`
-
-(*sem as barras invertidas* — aqui elas só estão para mostrar o código! No seu arquivo, não coloque as barras invertidas\*)
-
----
-
-### Ou seja, no seu README.md escreva:
-
 ```markdown
 
 libft/
